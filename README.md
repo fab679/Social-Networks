@@ -1,4 +1,4 @@
-# Social-Networks WITH NEO4J AND GRAPHQL
+# Social-Networks With Neo4j And Graphql
 A brief illustration of social network in neo4j
 
 ### Requirements
