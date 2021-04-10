@@ -1,7 +1,7 @@
 # Social-Networks
 A brief illustration of social network in neo4j
 
-### nodmemon
+### nodemmon
 make sure you have nodemon installed globally if not run ```npm install nodemon -g ```
 
 ### Clone Repository
