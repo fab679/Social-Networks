@@ -16,13 +16,22 @@ type Post {
     createdAt:DateTime! @timestamp
     creator:User! @relationship(type:"POSTED", direction:IN)
     liked:[User] @relationship(type:"LIKES", direction:IN)
+    comments:[Comment] @relationship(type:"ON", direction:IN)
 }
 type User{
     id:ID!@id
-    name:String
+    name:String!
     posts:[Post] @relationship(type:"POSTED", direction:OUT)
     likes:[Post] @relationship(type:"LIKES", direction:OUT)
     follows:[User] @relationship(type:"FOLLOWS", direction:OUT)
+    comment:[Comment] @relationship(type:"COMMENTED",direction:OUT)
+}
+type Comment{
+    id:ID! @id
+    message:String!
+    createdAt:DateTime! @timestamp
+    creator:User! @relationship(type:"COMMENTED",direction:IN)
+    post:Post! @relationship(type:"ON", direction:OUT)
 }
 `;
 
